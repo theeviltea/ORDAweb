@@ -65,9 +65,8 @@ export function HomeMotion() {
     };
     const hero = main.querySelector('section[aria-label="Главное"]');
     if (hero) {
-      hero.querySelectorAll(':scope > svg').forEach((s, i) => add(s, [0.25, -0.15, 0.4, 0.55][i] ?? 0.2));
-      add(hero.querySelector(':scope > div[aria-hidden]'), -0.12); // надпись ORDA
-      add(hero.querySelector('img'), 0.12); // фото команды
+      hero.querySelectorAll(':scope > svg').forEach((s, i) => add(s, [0.35, 0.5, -0.15][i] ?? 0.2));
+      add(hero.querySelector(':scope > img'), 0.1); // флаг на фоне
     }
     const player = main.querySelector('section[aria-label="Игрок матча"]');
     if (player) {

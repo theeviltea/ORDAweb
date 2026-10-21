@@ -20,26 +20,36 @@ export function HomeView(props: {}) {
     <>
       <div style={{ width: '100%', background: '#172A51', paddingBottom: '1px', fontFamily: "'Roboto Condensed', sans-serif", color: '#172A51' }}>
         <div style={{ margin: '0 0 40px', borderRadius: '0', overflow: 'hidden' }}>
-          <section style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #E7F5FB 0%, #CFE9F6 100%)' }} aria-label="Главное">
-            <Star w={520} h={820} fill="#FFFFFF" style={{ position: 'absolute', right: '18%', top: '-120px', opacity: '0.55' }} />
-            <Star w={260} h={400} fill="#DCEEF8" style={{ position: 'absolute', left: '-90px', bottom: '-60px' }} />
-            <Star w={28} h={28} fill="#129ED9" style={{ position: 'absolute', left: '48%', top: '90px' }} />
-            <Star w={16} h={16} fill="#7CC6E9" style={{ position: 'absolute', left: '45%', top: '140px' }} />
+          <section style={{ position: 'relative', overflow: 'hidden', background: '#172A51', color: '#FFFFFF' }} aria-label="Главное">
+            <img
+              style={{ position: 'absolute', right: '0', top: '-8%', width: '78%', height: '116%', objectFit: 'cover', objectPosition: '40% center' }}
+              src={asset('/img/hero-flag.webp')}
+              alt=""
+              aria-hidden="true"
+            />
             <div
               style={{
                 position: 'absolute',
-                right: '-20px',
-                bottom: '-40px',
-                fontFamily: "'SO Sporty', 'Oswald', sans-serif",
-                fontSize: '240px',
-                fontWeight: '700',
-                lineHeight: '0.8',
-                color: 'rgba(255, 255, 255, 0.6)',
+                inset: '0',
+                background:
+                  'linear-gradient(90deg, #172A51 0%, #172A51 24%, rgba(23, 42, 81, 0.82) 44%, rgba(23, 42, 81, 0.35) 70%, rgba(23, 42, 81, 0.15) 100%)',
               }}
               aria-hidden="true"
-            >
-              ORDA
-            </div>
+            />
+            <div
+              style={{
+                position: 'absolute',
+                left: '0',
+                right: '0',
+                bottom: '0',
+                height: '180px',
+                background: 'linear-gradient(180deg, rgba(23, 42, 81, 0) 0%, #172A51 100%)',
+              }}
+              aria-hidden="true"
+            />
+            <Star w={28} h={28} fill="#129ED9" style={{ position: 'absolute', left: '44%', top: '80px' }} />
+            <Star w={14} h={14} fill="#7CC6E9" style={{ position: 'absolute', left: '41%', top: '130px' }} />
+            <Star w={240} h={380} fill="rgba(18, 158, 217, 0.12)" style={{ position: 'absolute', left: '-100px', bottom: '-80px' }} />
             <div
               style={{
                 position: 'relative',
@@ -48,30 +58,48 @@ export function HomeView(props: {}) {
                 margin: '0 auto',
                 padding: '0 40px',
                 boxSizing: 'border-box',
-                minHeight: '500px',
+                minHeight: '580px',
                 display: 'flex',
                 alignItems: 'stretch',
                 gap: '40px',
                 flexWrap: 'wrap',
               }}
             >
-              <div style={{ flex: '1 1 520px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '20px', padding: '48px 0' }}>
+              <div style={{ flex: '1 1 520px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '22px', padding: '56px 0' }}>
+                <span
+                  style={{
+                    alignSelf: 'flex-start',
+                    height: '32px',
+                    padding: '0 14px',
+                    borderRadius: '16px',
+                    background: 'rgba(18, 158, 217, 0.18)',
+                    color: '#7CC6E9',
+                    fontSize: '14px',
+                    fontWeight: '700',
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                    display: 'flex',
+                    alignItems: 'center',
+                  }}
+                >
+                  Шымкент · с 1949 года
+                </span>
                 <h1
                   style={{
                     margin: '0',
                     fontFamily: "'SO Sporty', 'Oswald', sans-serif",
-                    fontSize: '80px',
+                    fontSize: '88px',
                     fontWeight: '600',
-                    lineHeight: '0.92',
+                    lineHeight: '0.9',
                     textTransform: 'uppercase',
-                    color: '#172A51',
+                    color: '#FFFFFF',
                   }}
                 >
                   Один город.
                   <br />
                   Одна команда.
                 </h1>
-                <p style={{ margin: '0', maxWidth: '460px', fontSize: '20px', lineHeight: '1.45', color: '#5B6B8C' }}>
+                <p style={{ margin: '0', maxWidth: '460px', fontSize: '20px', lineHeight: '1.45', color: '#CFE3F2' }}>
                   Наш город. Наши цвета. Наша игра. Всё, чем живёт «Ордабасы», — здесь.
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -80,16 +108,18 @@ export function HomeView(props: {}) {
                       height: '56px',
                       padding: '0 28px',
                       borderRadius: '16px',
-                      background: '#0B7DB0',
+                      background: '#129ED9',
                       color: '#FFFFFF',
                       fontSize: '18px',
                       fontWeight: '700',
                       display: 'flex',
                       alignItems: 'center',
+                      gap: '8px',
                       textDecoration: 'none',
                     }}
                     href="/tickets"
                   >
+                    <Icon name="ticket-01" size={20} weight={1.8} color="#FFFFFF" />
                     На следующий матч
                   </Link>
                   <Link
@@ -97,8 +127,10 @@ export function HomeView(props: {}) {
                       height: '56px',
                       padding: '0 24px',
                       borderRadius: '16px',
-                      background: '#FFFFFF',
-                      color: '#172A51',
+                      background: 'rgba(255, 255, 255, 0.1)',
+                      border: '1.5px solid rgba(255, 255, 255, 0.35)',
+                      boxSizing: 'border-box',
+                      color: '#FFFFFF',
                       fontSize: '18px',
                       fontWeight: '700',
                       display: 'flex',
@@ -106,27 +138,78 @@ export function HomeView(props: {}) {
                       gap: '6px',
                       textDecoration: 'none',
                     }}
-                    href="/#interview"
+                    href="/team"
                   >
-                    Знакомьтесь с клубом
-                    <Icon name="arrow-right-01" size={20} weight={2} color="#172A51" />
+                    Знакомьтесь с командой
+                    <Icon name="arrow-right-01" size={20} weight={2} color="#FFFFFF" />
                   </Link>
                 </div>
               </div>
-              <div style={{ position: 'relative', flex: '1 1 480px', minHeight: '360px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
-                <img
+              <div style={{ position: 'relative', flex: '1 1 480px', minHeight: '420px' }}>
+                {v.heroPlayers.map((p: any, pIdx: number) => (
+                  <Fragment key={pIdx}>
+                    <img
+                      style={{
+                        position: 'absolute',
+                        left: '50%',
+                        bottom: '0',
+                        height: '540px',
+                        width: 'auto',
+                        maxWidth: 'none',
+                        opacity: p.op,
+                        transform: `translateX(-50%) translateY(${p.dy}) scale(${p.sc})`,
+                        transformOrigin: 'bottom center',
+                        transition: 'opacity 0.9s ease, transform 1.1s cubic-bezier(0.2, 0.7, 0.2, 1)',
+                        filter: 'drop-shadow(0 24px 40px rgba(5, 12, 28, 0.55))',
+                      }}
+                      src={p.photo}
+                      alt={p.name}
+                    />
+                  </Fragment>
+                ))}
+                <Link
                   style={{
-                    position: 'relative',
-                    height: '480px',
-                    width: 'auto',
-                    maxWidth: '100%',
-                    objectFit: 'contain',
-                    objectPosition: 'bottom',
-                    display: 'block',
+                    position: 'absolute',
+                    right: '0',
+                    bottom: '36px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '14px',
+                    padding: '12px 18px 12px 12px',
+                    borderRadius: '22px',
+                    background: 'rgba(23, 42, 81, 0.72)',
+                    backdropFilter: 'blur(10px)',
+                    WebkitBackdropFilter: 'blur(10px)',
+                    color: '#FFFFFF',
+                    textDecoration: 'none',
                   }}
-                  src={asset('/img/media-team.webp')}
-                  alt="Игроки «Ордабасы» празднуют"
-                />
+                  href="/team/player"
+                >
+                  <span
+                    style={{
+                      fontFamily: "'SO Sporty', 'Oswald', sans-serif",
+                      fontSize: '40px',
+                      fontWeight: '600',
+                      lineHeight: '1',
+                      color: '#129ED9',
+                      minWidth: '52px',
+                      textAlign: 'center',
+                    }}
+                  >
+                    {v.hero.num}
+                  </span>
+                  <span style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                    <span style={{ fontSize: '18px', fontWeight: '700' }}>{v.hero.name}</span>
+                    <span style={{ fontSize: '14px', color: '#CFE3F2' }}>{v.hero.role}</span>
+                  </span>
+                </Link>
+                <div style={{ position: 'absolute', right: '0', bottom: '12px', display: 'flex', gap: '6px' }} aria-hidden="true">
+                  {v.heroDots.map((d: any, dIdx: number) => (
+                    <Fragment key={dIdx}>
+                      <span style={{ width: d.w, height: '6px', borderRadius: '3px', background: d.c, transition: 'width 0.4s ease, background 0.4s ease' }} />
+                    </Fragment>
+                  ))}
+                </div>
               </div>
             </div>
           </section>

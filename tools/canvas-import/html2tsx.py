@@ -17,7 +17,7 @@ BLOB = {
  '4d67ab61286e744506c62d829f1e53db': 'crest.png', '6974ca45c15be3a51d29ba644593c128': 'icon3d-quiz.png', '7be8c8b03264166eb514582a06b625f2': 'sponsor-erg.png',
  '7c04acf1080dde2562f4bfbb0af16813': 'sponsor-eurasia.png', '868fedd7e2c0c2e7b802528b42433680': 'sponsor-integra.png', 'a461dde96634135f6084c23d62db82a2': 'icon3d-contest.png',
  'a51849775be2a9d841522a04b4ce8080': 'icon3d-results.png', 'c9e29517ee64fc85fee10710a4dd201d': 'icon3d-poll.png', 'ca6a7a1ab81619d1a06dd7d22efdd32c': 'icon3d-tasks.png',
- '1075887fbca7645452c2a7bcf7abc8f7': 'news-bg.svg', '4a1d46527a3920434ba2d04b53a3aa2f': 'crest-white.svg',
+ '1075887fbca7645452c2a7bcf7abc8f7': 'news-bg.svg', 'e661484092743226ca8f5450b5a024bd': 'hero-flag.webp', '4a1d46527a3920434ba2d04b53a3aa2f': 'crest-white.svg',
 }
 ROUTE = {
  'WebMain': '/', 'WebTeam': '/team', 'WebMatches': '/matches', 'WebMatchesResults': '/matches', 'WebMatchesTable': '/matches', 'WebMedia': '/media',
