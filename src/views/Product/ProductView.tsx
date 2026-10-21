@@ -128,7 +128,7 @@ export function ProductView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
           aria-label="Товар"
         >
           <div
@@ -774,7 +774,7 @@ export function ProductView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
           aria-label="О товаре"
         >
           <div
@@ -860,7 +860,7 @@ export function ProductView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#E7F5FB', padding: '56px 0' }}
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#E7F5FB', padding: '56px 0' }}
           aria-label="Похожие товары"
         >
           <div

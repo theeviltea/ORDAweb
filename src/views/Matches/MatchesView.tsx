@@ -177,7 +177,7 @@ export function MatchesView(props: {}) {
             <section
               style={{
                 position: 'relative',
-                margin: '0 24px 40px',
+                margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
                 borderRadius: '32px',
                 overflow: 'hidden',
                 background: 'linear-gradient(120deg, #172A51 0%, #1B5A93 55%, #129ED9 100%)',
@@ -364,7 +364,7 @@ export function MatchesView(props: {}) {
               </div>
             </section>
             <section
-              style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+              style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
               aria-label="Календарь"
             >
               <div
@@ -635,7 +635,7 @@ export function MatchesView(props: {}) {
         {v.isResults && (
           <>
             <section
-              style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+              style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
               aria-label="Результаты"
             >
               <div
@@ -841,7 +841,7 @@ export function MatchesView(props: {}) {
         {v.isTable && (
           <>
             <section
-              style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+              style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
               aria-label="Турнирная таблица"
             >
               <div

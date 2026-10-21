@@ -184,7 +184,7 @@ export function HomeView(props: {}) {
           </div>
         </div>
         <section
-          style={{ margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', color: '#172A51', padding: '56px 0' }}
+          style={{ margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', color: '#172A51', padding: '56px 0' }}
           id="match"
           aria-label="Ближайший матч"
         >
@@ -534,7 +534,7 @@ export function HomeView(props: {}) {
         </section>
         <section
           style={{
-            margin: '0 24px 40px',
+            margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
             borderRadius: '32px',
             overflow: 'hidden',
             background: `#16436E url('${asset('/img/news-bg.svg')}') center bottom / cover no-repeat`,
@@ -723,7 +723,7 @@ export function HomeView(props: {}) {
           </div>
         </section>
         <section
-          style={{ margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', color: '#172A51' }}
+          style={{ margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', color: '#172A51' }}
           id="interview"
           aria-label="Интервью"
         >
@@ -944,7 +944,7 @@ export function HomeView(props: {}) {
           </div>
         </section>
         <section
-          style={{ margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#E7F5FB', padding: '56px 0' }}
+          style={{ margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#E7F5FB', padding: '56px 0' }}
           id="store"
           aria-label="Магазин"
         >
@@ -1331,7 +1331,7 @@ export function HomeView(props: {}) {
             </div>
           </div>
         </section>
-        <section style={{ position: 'relative', margin: '0 24px 40px', padding: '56px 0', overflow: 'visible' }} id="moments" aria-label="Моменты">
+        <section style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', padding: '56px 0', overflow: 'visible' }} id="moments" aria-label="Моменты">
           <Star
             w={150}
             h={150}
@@ -1688,7 +1688,7 @@ export function HomeView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '56px 0' }}
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '56px 0' }}
           id="media"
           aria-label="Медиа"
         >
@@ -1863,7 +1863,7 @@ export function HomeView(props: {}) {
           </div>
         </section>
         <section
-          style={{ margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+          style={{ margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
           id="teams"
           aria-label="Команды клуба"
         >
@@ -1991,7 +1991,7 @@ export function HomeView(props: {}) {
             </div>
           </div>
         </section>
-        <section style={{ margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '0px' }} aria-label="Игрок матча">
+        <section style={{ margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '0px' }} aria-label="Игрок матча">
           <div
             style={{
               width: '100%',
@@ -2250,7 +2250,7 @@ export function HomeView(props: {}) {
           </div>
         </section>
         <section
-          style={{ margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+          style={{ margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
           aria-label="Турнирная таблица"
         >
           <div
@@ -2546,7 +2546,7 @@ export function HomeView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', height: '400px', background: '#172A51' }}
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', height: '400px', background: '#172A51' }}
           id="fans"
           aria-label="Для вас"
         >
@@ -3188,7 +3188,7 @@ export function HomeView(props: {}) {
           </div>
         </section>
         <section
-          style={{ margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '48px 0' }}
+          style={{ margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '48px 0' }}
           aria-label="Партнёры клуба"
         >
           <div

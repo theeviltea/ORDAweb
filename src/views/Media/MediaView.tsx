@@ -387,7 +387,7 @@ export function MediaView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
           id="news"
           aria-label="Новости"
         >
@@ -513,7 +513,7 @@ export function MediaView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '56px 0' }}
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '56px 0' }}
           id="video"
           aria-label="Видео"
         >
@@ -918,7 +918,7 @@ export function MediaView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#E7F5FB', padding: '56px 0' }}
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#E7F5FB', padding: '56px 0' }}
           id="photo"
           aria-label="Фото"
         >
@@ -1213,7 +1213,7 @@ export function MediaView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
           id="stories"
           aria-label="Статьи и интервью"
         >
@@ -1502,7 +1502,7 @@ export function MediaView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#F2F6FA', padding: '56px 0' }}
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#F2F6FA', padding: '56px 0' }}
           id="press"
           aria-label="Пресс-конференции"
         >

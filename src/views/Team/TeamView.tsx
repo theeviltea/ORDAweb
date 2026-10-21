@@ -149,7 +149,7 @@ export function TeamView(props: {}) {
             <section
               style={{
                 position: 'relative',
-                margin: '0 24px 40px',
+                margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
                 borderRadius: '32px',
                 overflow: 'hidden',
                 background: 'linear-gradient(120deg, #E7F5FB 0%, #CFE9F6 55%, #9FD6F0 100%)',
@@ -271,7 +271,7 @@ export function TeamView(props: {}) {
               </div>
             </section>
             <section
-              style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+              style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
               id="players"
               aria-label="Игроки"
             >
@@ -403,7 +403,7 @@ export function TeamView(props: {}) {
               </div>
             </section>
             <section
-              style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#E7F5FB', padding: '56px 0' }}
+              style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#E7F5FB', padding: '56px 0' }}
               id="staff"
               aria-label="Штаб и персонал"
             >
@@ -509,7 +509,7 @@ export function TeamView(props: {}) {
         {v.isOther && (
           <>
             <section
-              style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+              style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
               aria-label="Команда"
             >
               <div
@@ -943,7 +943,7 @@ export function TeamView(props: {}) {
               </div>
             </section>
             <section
-              style={{ position: 'relative', margin: '0 24px 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '40px 0' }}
+              style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '40px 0' }}
               aria-label="Основной состав"
             >
               <div
