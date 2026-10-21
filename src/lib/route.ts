@@ -20,8 +20,8 @@ const map: Record<string, string> = {
   Lineup: '/matches',
   Matches: '/matches',
   MatchesTable: '/matches',
-  Article: '/media',
-  News: '/media',
+  Article: '/news/article',
+  News: '/news',
   StoryInterview: '/media',
   StoryLongread: '/media',
   Interviews: '/media',
@@ -53,7 +53,10 @@ const map: Record<string, string> = {
   ShopOrders: '/shop/orders',
   Shop: '/shop',
   Team: '/team',
-  Player: '/team',
+  Player: '/team/player',
+  WebPlayer: '/team/player',
+  WebNews: '/news',
+  WebArticle: '/news/article',
 };
 
 export function route(href: string): string {

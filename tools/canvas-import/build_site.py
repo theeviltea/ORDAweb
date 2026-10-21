@@ -20,6 +20,9 @@ PAGES = [
     ('WebShopOrders', 'ShopOrders', 'shop/orders', 'Мои заказы', 'Статусы доставки и история покупок.'),
     ('WebFans', 'Fans', 'fans', 'Фан-зона', 'Викторины, конкурсы, опросы и прогнозы.'),
     ('WebProfile', 'Profile', 'profile', 'Личный кабинет', 'Билеты, покупки, достижения и настройки.'),
+    ('WebPlayer', 'Player', 'team/player', 'Эльхан Астанов', 'Профиль игрока «Ордабасы»: биография, статистика, награды.'),
+    ('WebNews', 'News', 'news', 'Новости', 'Новости футбольного клуба «Ордабасы».'),
+    ('WebArticle', 'Article', 'news/article', '«Ордабасы» сохранил лидерство', 'Новость клуба «Ордабасы».'),
 ]
 
 
@@ -52,6 +55,7 @@ def js_logic(sc):
     body = re.sub(r'\bthis\b', 'self', body).replace('Date.now()', 'self.now')
     body = re.sub(r"\n\s*const B = '/_blob/';", "", body)
     body = re.sub(r"'/_blob/([0-9a-f]{32})'", r"blob('\1')", body)
+    body = re.sub(r"'/_blob/' \+ (\w+)", r"blob(\1)", body)
     body = re.sub(r"\bB \+ ", "blob(", body)
     body = re.sub(r"blob\((id|'[0-9a-f]{32}')(?!\))", r"blob(\1)", body)
     ids = sorted(set(re.findall(r"[0-9a-f]{32}", body)))
@@ -97,10 +101,11 @@ def gen_page(board, name, route, title, desc):
     open(f'{pd}/page.tsx', 'w').write(
         f"import type {{ Metadata }} from 'next';\nimport {{ {name}View }} from '@/views/{name}/{name}View';\n\n"
         f"export const metadata: Metadata = {{ title: {json.dumps(meta_title, ensure_ascii=False)}, description: {json.dumps(desc, ensure_ascii=False)} }};\n\n"
-        (f"export default function Page() {{\n  return <{name}View />;\n}}\n" if name != 'Home' else "export default function Page() {\n  return (\n    <>\n      <HomeView />\n      <HomeMotion />\n    </>\n  );\n}\n"))
+        + (f"export default function Page() {{\n  return <{name}View />;\n}}\n" if name != 'Home' else "export default function Page() {\n  return (\n    <>\n      <HomeView />\n      <HomeMotion />\n    </>\n  );\n}\n"))
     if name == 'Home':
         fp = f'{pd}/page.tsx'
-        open(fp, 'w').write(open(fp).read().replace("from '@/views/Home/HomeView';", "from '@/views/Home/HomeView';\nimport { HomeMotion } from '@/components/HomeMotion';"))
+        src_ = open(fp).read()
+        open(fp, 'w').write(src_.replace("from '@/views/Home/HomeView';", "from '@/views/Home/HomeView';\nimport { HomeMotion } from '@/components/HomeMotion';"))
 
 
 for p in PAGES:

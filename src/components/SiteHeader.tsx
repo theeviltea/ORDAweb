@@ -7,6 +7,7 @@ const sections: [string, string][] = [
   ['/team', 'team'],
   ['/matches', 'matches'],
   ['/media', 'media'],
+  ['/news', 'media'],
   ['/shop', 'shop'],
   ['/fans', 'fans'],
   ['/profile', 'none'],

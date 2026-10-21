@@ -106,7 +106,7 @@ export function HomeView(props: {}) {
                       gap: '6px',
                       textDecoration: 'none',
                     }}
-                    href="/#club"
+                    href="/#interview"
                   >
                     Знакомьтесь с клубом
                     <Icon name="arrow-right-01" size={20} weight={2} color="#172A51" />
@@ -184,7 +184,14 @@ export function HomeView(props: {}) {
           </div>
         </div>
         <section
-          style={{ margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', color: '#172A51', padding: '56px 0' }}
+          style={{
+            margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
+            borderRadius: '32px',
+            overflow: 'hidden',
+            background: '#FFFFFF',
+            color: '#172A51',
+            padding: '56px 0',
+          }}
           id="match"
           aria-label="Ближайший матч"
         >
@@ -582,7 +589,7 @@ export function HomeView(props: {}) {
                   color: '#CFE3F2',
                   textDecoration: 'none',
                 }}
-                href="/media"
+                href="/news"
               >
                 Все новости
                 <Icon name="arrow-right-01" size={18} weight={2} color="#CFE3F2" />
@@ -601,7 +608,7 @@ export function HomeView(props: {}) {
                   textDecoration: 'none',
                   display: 'block',
                 }}
-                href="/media"
+                href="/news/article"
               >
                 <img
                   style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }}
@@ -1331,7 +1338,11 @@ export function HomeView(props: {}) {
             </div>
           </div>
         </section>
-        <section style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', padding: '56px 0', overflow: 'visible' }} id="moments" aria-label="Моменты">
+        <section
+          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', padding: '56px 0', overflow: 'visible' }}
+          id="moments"
+          aria-label="Моменты"
+        >
           <Star
             w={150}
             h={150}
@@ -1688,7 +1699,14 @@ export function HomeView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '56px 0' }}
+          style={{
+            position: 'relative',
+            margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
+            borderRadius: '32px',
+            overflow: 'hidden',
+            background: '#1F3562',
+            padding: '56px 0',
+          }}
           id="media"
           aria-label="Медиа"
         >
@@ -1738,7 +1756,7 @@ export function HomeView(props: {}) {
               </Link>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-              <Link style={{ display: 'flex', flexDirection: 'column', gap: '14px', color: '#FFFFFF', textDecoration: 'none' }} href="/media">
+              <Link style={{ display: 'flex', flexDirection: 'column', gap: '14px', color: '#FFFFFF', textDecoration: 'none' }} href="/">
                 <span style={{ position: 'relative', height: '210px', borderRadius: '22px', overflow: 'hidden', background: '#172A51', display: 'block' }}>
                   <img
                     style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }}
@@ -1791,7 +1809,7 @@ export function HomeView(props: {}) {
                   <span style={{ fontSize: '15px', color: '#CFE3F2' }}>Чемпионат · Полный матч</span>
                 </span>
               </Link>
-              <Link style={{ display: 'flex', flexDirection: 'column', gap: '14px', color: '#FFFFFF', textDecoration: 'none' }} href="/media">
+              <Link style={{ display: 'flex', flexDirection: 'column', gap: '14px', color: '#FFFFFF', textDecoration: 'none' }} href="/">
                 <span style={{ position: 'relative', height: '210px', borderRadius: '22px', overflow: 'hidden', background: '#172A51', display: 'block' }}>
                   <img
                     style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }}
@@ -1825,7 +1843,7 @@ export function HomeView(props: {}) {
                   <span style={{ fontSize: '15px', color: '#CFE3F2' }}>Тренировки · 12:40</span>
                 </span>
               </Link>
-              <Link style={{ display: 'flex', flexDirection: 'column', gap: '14px', color: '#FFFFFF', textDecoration: 'none' }} href="/media">
+              <Link style={{ display: 'flex', flexDirection: 'column', gap: '14px', color: '#FFFFFF', textDecoration: 'none' }} href="/">
                 <span style={{ position: 'relative', height: '210px', borderRadius: '22px', overflow: 'hidden', background: '#172A51', display: 'block' }}>
                   <img
                     style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }}
@@ -1991,7 +2009,10 @@ export function HomeView(props: {}) {
             </div>
           </div>
         </section>
-        <section style={{ margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '0px' }} aria-label="Игрок матча">
+        <section
+          style={{ margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '0px' }}
+          aria-label="Игрок матча"
+        >
           <div
             style={{
               width: '100%',
@@ -2241,7 +2262,7 @@ export function HomeView(props: {}) {
                   color: '#FFFFFF',
                   textDecoration: 'none',
                 }}
-                href="/team"
+                href="/team/player"
               >
                 Профиль игрока
                 <Icon name="arrow-right-01" size={18} weight={2} color="#CFE3F2" />
@@ -2546,7 +2567,14 @@ export function HomeView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', height: '400px', background: '#172A51' }}
+          style={{
+            position: 'relative',
+            margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
+            borderRadius: '32px',
+            overflow: 'hidden',
+            height: '400px',
+            background: '#172A51',
+          }}
           id="fans"
           aria-label="Для вас"
         >

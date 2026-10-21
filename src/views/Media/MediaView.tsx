@@ -230,7 +230,7 @@ export function MediaView(props: {}) {
                   color: '#FFFFFF',
                   textDecoration: 'none',
                 }}
-                href="/media"
+                href="/news/article"
               >
                 <img
                   style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover', objectPosition: '40% center' }}
@@ -285,7 +285,7 @@ export function MediaView(props: {}) {
                     color: '#FFFFFF',
                     textDecoration: 'none',
                   }}
-                  href="/media"
+                  href="/news/article"
                 >
                   <img
                     style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%' }}
@@ -339,7 +339,7 @@ export function MediaView(props: {}) {
                     color: '#FFFFFF',
                     textDecoration: 'none',
                   }}
-                  href="/media"
+                  href="/news/article"
                 >
                   <img
                     style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover', objectPosition: '45% center' }}
@@ -387,7 +387,14 @@ export function MediaView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+          style={{
+            position: 'relative',
+            margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
+            borderRadius: '32px',
+            overflow: 'hidden',
+            background: '#FFFFFF',
+            padding: '56px 0',
+          }}
           id="news"
           aria-label="Новости"
         >
@@ -459,7 +466,7 @@ export function MediaView(props: {}) {
                       display: 'flex',
                       flexDirection: 'column',
                     }}
-                    href="/media"
+                    href="/news/article"
                   >
                     <span style={{ position: 'relative', height: '200px', background: '#EEF3F8' }}>
                       <img style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }} src={n.img} alt="" />
@@ -505,7 +512,7 @@ export function MediaView(props: {}) {
                 gap: '8px',
                 textDecoration: 'none',
               }}
-              href="/media"
+              href="/news"
             >
               Показать ещё
               <Icon name="arrow-down-01" size={18} weight={2} color="#172A51" />
@@ -513,7 +520,14 @@ export function MediaView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#1F3562', padding: '56px 0' }}
+          style={{
+            position: 'relative',
+            margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
+            borderRadius: '32px',
+            overflow: 'hidden',
+            background: '#1F3562',
+            padding: '56px 0',
+          }}
           id="video"
           aria-label="Видео"
         >
@@ -573,7 +587,7 @@ export function MediaView(props: {}) {
                   color: '#FFFFFF',
                   textDecoration: 'none',
                 }}
-                href="/media"
+                href="/"
               >
                 <img
                   style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }}
@@ -648,7 +662,7 @@ export function MediaView(props: {}) {
                     color: '#FFFFFF',
                     textDecoration: 'none',
                   }}
-                  href="/media"
+                  href="/"
                 >
                   <span
                     style={{
@@ -717,7 +731,7 @@ export function MediaView(props: {}) {
                     color: '#FFFFFF',
                     textDecoration: 'none',
                   }}
-                  href="/media"
+                  href="/"
                 >
                   <span
                     style={{
@@ -786,7 +800,7 @@ export function MediaView(props: {}) {
                     color: '#FFFFFF',
                     textDecoration: 'none',
                   }}
-                  href="/media"
+                  href="/"
                 >
                   <span
                     style={{
@@ -855,7 +869,7 @@ export function MediaView(props: {}) {
                     color: '#FFFFFF',
                     textDecoration: 'none',
                   }}
-                  href="/media"
+                  href="/"
                 >
                   <span
                     style={{
@@ -918,7 +932,14 @@ export function MediaView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#E7F5FB', padding: '56px 0' }}
+          style={{
+            position: 'relative',
+            margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
+            borderRadius: '32px',
+            overflow: 'hidden',
+            background: '#E7F5FB',
+            padding: '56px 0',
+          }}
           id="photo"
           aria-label="Фото"
         >
@@ -1213,7 +1234,14 @@ export function MediaView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#FFFFFF', padding: '56px 0' }}
+          style={{
+            position: 'relative',
+            margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
+            borderRadius: '32px',
+            overflow: 'hidden',
+            background: '#FFFFFF',
+            padding: '56px 0',
+          }}
           id="stories"
           aria-label="Статьи и интервью"
         >
@@ -1502,7 +1530,14 @@ export function MediaView(props: {}) {
           </div>
         </section>
         <section
-          style={{ position: 'relative', margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px', borderRadius: '32px', overflow: 'hidden', background: '#F2F6FA', padding: '56px 0' }}
+          style={{
+            position: 'relative',
+            margin: '0 max(24px, calc((100% - 1280px) / 2)) 40px',
+            borderRadius: '32px',
+            overflow: 'hidden',
+            background: '#F2F6FA',
+            padding: '56px 0',
+          }}
           id="press"
           aria-label="Пресс-конференции"
         >
@@ -1690,7 +1725,7 @@ export function MediaView(props: {}) {
                     color: '#172A51',
                     textDecoration: 'none',
                   }}
-                  href="/media"
+                  href="/"
                 >
                   <span
                     style={{
@@ -1763,7 +1798,7 @@ export function MediaView(props: {}) {
                     color: '#172A51',
                     textDecoration: 'none',
                   }}
-                  href="/media"
+                  href="/"
                 >
                   <span
                     style={{
@@ -1834,7 +1869,7 @@ export function MediaView(props: {}) {
                     color: '#172A51',
                     textDecoration: 'none',
                   }}
-                  href="/media"
+                  href="/"
                 >
                   <span
                     style={{

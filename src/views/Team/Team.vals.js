@@ -45,7 +45,7 @@ export const tick = false;
 export function vals(self) {
   const st = self.state || {};
   const cur = st.team ?? 'main';
-  const pl = (num, name, role, id) => ({ num, name, role, photo: blob(id), href: 'Player.dc.html' });
+  const pl = (num, name, role, id) => ({ num, name, role, photo: blob(id), href: 'WebPlayer.dc.html' });
   const sf = (name, role, id) => ({ num: '', name, role, photo: blob(id), href: 'WebTeam.dc.html' });
   const g = (id, title, people) => ({ id, title, people, anchor: '#' + id, count: String(people.length) });
   const players = [
