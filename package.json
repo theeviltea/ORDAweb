@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "npx serve out",
     "format": "prettier --write \"src/**/*.{tsx,ts,js,css}\"",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "preview:artifact": "node tools/artifact-preview/build.mjs && cp -r public/img public/fonts preview-artifact/"
   },
   "dependencies": {
     "next": "15.5.28",
@@ -19,6 +20,7 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "esbuild": "^0.25.12",
     "prettier": "^3.9.10",
     "typescript": "^5"
   }
