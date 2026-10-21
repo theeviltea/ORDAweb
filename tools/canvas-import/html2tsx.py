@@ -23,7 +23,7 @@ ROUTE = {
  'WebMain': '/', 'WebTeam': '/team', 'WebMatches': '/matches', 'WebMatchesResults': '/matches', 'WebMatchesTable': '/matches', 'WebMedia': '/media',
  'WebShop': '/shop', 'WebProduct': '/shop/product', 'WebShopOrders': '/shop/orders', 'WebFans': '/fans', 'WebProfile': '/profile',
  'WebProfileTickets': '/profile', 'WebProfileOrders': '/profile', 'WebProfileAchievements': '/profile', 'WebProfileData': '/profile', 'WebProfileSettings': '/profile',
- 'Tickets': '/tickets', 'WebTickets': '/tickets', 'Lineup': '/matches', 'Matches': '/matches', 'MatchesTable': '/matches', 'Article': '/news/article', 'News': '/news', 'StoryInterview': '/media', 'StoryLongread': '/media',
+ 'Tickets': '/tickets', 'WebTickets': '/tickets', 'Lineup': '/matches/lineup', 'WebLineup': '/matches/lineup', 'Matches': '/matches', 'MatchesTable': '/matches', 'Article': '/news/article', 'News': '/news', 'StoryInterview': '/media', 'StoryLongread': '/media',
  'Interviews': '/media', 'Videos': '/media', 'VideoPlayer': '/media', 'Photos': '/media/photos', 'PhotoAlbum': '/media/photos/album', 'WebPhotos': '/media/photos', 'WebPhotoAlbum': '/media/photos/album', 'PressConf': '/media', 'MomentViewer': '/media',
  'Login': '/profile', 'Support': '/profile', 'TicketQR': '/profile', 'NewPassword': '/profile', 'Achievements': '/profile',
  'Quizzes': '/fans', 'Contests': '/fans', 'Contest': '/fans', 'ContestApplyFilled': '/fans', 'ContestWinners': '/fans', 'Polls': '/fans', 'Predictions': '/fans', 'Tasks': '/fans',

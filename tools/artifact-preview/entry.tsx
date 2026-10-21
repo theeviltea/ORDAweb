@@ -18,6 +18,7 @@ import { PlayerView } from '@/views/Player/PlayerView';
 import { NewsView } from '@/views/News/NewsView';
 import { ArticleView } from '@/views/Article/ArticleView';
 import { TicketsView } from '@/views/Tickets/TicketsView';
+import { LineupView } from '@/views/Lineup/LineupView';
 import { PhotosView } from '@/views/Photos/PhotosView';
 import { PhotoAlbumView } from '@/views/PhotoAlbum/PhotoAlbumView';
 
@@ -43,6 +44,7 @@ const pages: Record<string, [string, () => JSX.Element]> = {
   '/news': ['Новости', () => <NewsView />],
   '/news/article': ['Новость', () => <ArticleView />],
   '/tickets': ['Покупка билетов', () => <TicketsView />],
+  '/matches/lineup': ['Состав и расстановка', () => <LineupView />],
   '/media/photos': ['Фото', () => <PhotosView />],
   '/media/photos/album': ['Фотоальбом', () => <PhotoAlbumView />],
 };

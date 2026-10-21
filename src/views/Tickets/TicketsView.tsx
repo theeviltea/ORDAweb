@@ -208,6 +208,26 @@ export function TicketsView(props: {}) {
                 <span style={{ fontFamily: "'SO Sporty', 'Oswald', sans-serif", fontSize: '56px', fontWeight: '600', lineHeight: '1' }}>19:00</span>
                 <span style={{ fontSize: '16px', color: '#E7F5FB' }}>Сб, 25 октября · 25 тур</span>
               </span>
+              <Link
+                style={{
+                  position: 'relative',
+                  height: '52px',
+                  padding: '0 22px',
+                  borderRadius: '16px',
+                  background: '#FFFFFF',
+                  color: '#172A51',
+                  fontSize: '17px',
+                  fontWeight: '700',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  textDecoration: 'none',
+                }}
+                href="/matches/lineup"
+              >
+                <Icon name="football-pitch" size={20} weight={1.8} color="#172A51" />
+                Состав команды
+              </Link>
             </div>
           </div>
         </section>

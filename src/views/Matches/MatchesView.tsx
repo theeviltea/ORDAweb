@@ -355,7 +355,7 @@ export function MatchesView(props: {}) {
                         gap: '8px',
                         textDecoration: 'none',
                       }}
-                      href="/matches"
+                      href="/matches/lineup"
                     >
                       Составы
                     </Link>
@@ -733,7 +733,7 @@ export function MatchesView(props: {}) {
                               color: '#172A51',
                               textDecoration: 'none',
                             }}
-                            href="/matches"
+                            href="/matches/lineup"
                           >
                             <span style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                               <span style={{ fontSize: '18px', fontWeight: '700' }}>{x.date}</span>
