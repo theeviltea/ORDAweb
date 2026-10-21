@@ -15,5 +15,9 @@ const sections: [string, string][] = [
 export function SiteHeader() {
   const path = usePathname() || '/';
   const hit = sections.find(([p]) => path === p || path.startsWith(p + '/'));
-  return <HeaderView active={hit ? hit[1] : 'home'} />;
+  return (
+    <div className="site-header">
+      <HeaderView active={hit ? hit[1] : 'home'} />
+    </div>
+  );
 }

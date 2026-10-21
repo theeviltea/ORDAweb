@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { HomeView } from '@/views/Home/HomeView';
+import { HomeMotion } from '@/components/HomeMotion';
 
 export const metadata: Metadata = {
   title: { absolute: 'ORDA — официальный сайт ФК «Ордабасы»' },
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <HomeView />;
+  return (
+    <>
+      <HomeView />
+      <HomeMotion />
+    </>
+  );
 }

@@ -97,7 +97,10 @@ def gen_page(board, name, route, title, desc):
     open(f'{pd}/page.tsx', 'w').write(
         f"import type {{ Metadata }} from 'next';\nimport {{ {name}View }} from '@/views/{name}/{name}View';\n\n"
         f"export const metadata: Metadata = {{ title: {json.dumps(meta_title, ensure_ascii=False)}, description: {json.dumps(desc, ensure_ascii=False)} }};\n\n"
-        f"export default function Page() {{\n  return <{name}View />;\n}}\n")
+        (f"export default function Page() {{\n  return <{name}View />;\n}}\n" if name != 'Home' else "export default function Page() {\n  return (\n    <>\n      <HomeView />\n      <HomeMotion />\n    </>\n  );\n}\n"))
+    if name == 'Home':
+        fp = f'{pd}/page.tsx'
+        open(fp, 'w').write(open(fp).read().replace("from '@/views/Home/HomeView';", "from '@/views/Home/HomeView';\nimport { HomeMotion } from '@/components/HomeMotion';"))
 
 
 for p in PAGES:

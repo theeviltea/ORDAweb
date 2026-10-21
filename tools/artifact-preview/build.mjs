@@ -10,7 +10,12 @@ const shims = path.join(root, 'tools/artifact-preview/shims');
 
 const res = await build({
   entryPoints: [path.join(root, 'tools/artifact-preview/entry.tsx')],
-  bundle: true, minify: true, write: false, format: 'iife', jsx: 'automatic', target: 'es2020',
+  bundle: true,
+  minify: true,
+  write: false,
+  format: 'iife',
+  jsx: 'automatic',
+  target: 'es2020',
   outdir: out,
   loader: { '.js': 'jsx' },
   alias: { 'next/link': path.join(shims, 'link.tsx'), 'next/navigation': path.join(shims, 'navigation.ts'), '@': path.join(root, 'src') },
@@ -18,10 +23,20 @@ const res = await build({
   external: ['*.ttf'],
 });
 const js = res.outputFiles.find((f) => f.path.endsWith('.js')).text.replace(/<\/script/g, '<\\/script');
-let css = res.outputFiles.filter((f) => f.path.endsWith('.css')).map((f) => f.text).join('\n');
+let css = res.outputFiles
+  .filter((f) => f.path.endsWith('.css'))
+  .map((f) => f.text)
+  .join('\n');
 css = css.replace(/url\([^)]*?fonts\/([^)'"]+)['"]?\)/g, "url('fonts/$1')").replace(/@font-face\{[^}]*\}/g, '');
 const fonts = `@font-face{font-family:'SO Sporty';src:url('fonts/SOSporty.ttf') format('truetype');font-weight:100 900;font-display:swap}
-${[['400', '400Regular'], ['500', '500Medium'], ['600', '600SemiBold'], ['700', '700Bold']].map(([w, f]) => `@font-face{font-family:'Roboto Condensed';src:url('fonts/RobotoCondensed_${f}.ttf') format('truetype');font-weight:${w};font-display:swap}`).join('\n')}`;
+${[
+  ['400', '400Regular'],
+  ['500', '500Medium'],
+  ['600', '600SemiBold'],
+  ['700', '700Bold'],
+]
+  .map(([w, f]) => `@font-face{font-family:'Roboto Condensed';src:url('fonts/RobotoCondensed_${f}.ttf') format('truetype');font-weight:${w};font-display:swap}`)
+  .join('\n')}`;
 const globals = readFileSync(path.join(root, 'src/app/globals.css'), 'utf8').replace(/@font-face[^}]*\}/g, '');
 const html = `<title>ORDA Сайт</title>
 <meta name="theme-color" content="#172A51">
