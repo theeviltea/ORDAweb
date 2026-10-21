@@ -19,7 +19,7 @@ export function HomeView(props: {}) {
   return (
     <>
       <div style={{ width: '100%', background: '#172A51', paddingBottom: '1px', fontFamily: "'Roboto Condensed', sans-serif", color: '#172A51' }}>
-        <div style={{ margin: '0 0 40px', borderRadius: '0', overflow: 'hidden' }}>
+        <div style={{ margin: '0 0 40px', borderRadius: '0', overflow: 'hidden', position: 'relative' }}>
           <section style={{ position: 'relative', overflow: 'hidden', background: '#172A51', color: '#FFFFFF' }} aria-label="Главное">
             <img
               style={{ position: 'absolute', right: '0', top: '-8%', width: '78%', height: '116%', objectFit: 'cover', objectPosition: '40% center' }}
@@ -42,8 +42,9 @@ export function HomeView(props: {}) {
                 left: '0',
                 right: '0',
                 bottom: '0',
-                height: '180px',
-                background: 'linear-gradient(180deg, rgba(23, 42, 81, 0) 0%, #172A51 100%)',
+                height: '280px',
+                background:
+                  'linear-gradient(180deg, rgba(23, 42, 81, 0) 0%, rgba(23, 42, 81, 0.35) 30%, rgba(23, 42, 81, 0.75) 62%, rgba(23, 42, 81, 0.94) 85%, #172A51 100%)',
               }}
               aria-hidden="true"
             />
@@ -65,7 +66,18 @@ export function HomeView(props: {}) {
                 flexWrap: 'wrap',
               }}
             >
-              <div style={{ flex: '1 1 520px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '22px', padding: '56px 0' }}>
+              <div
+                style={{
+                  flex: '1 1 520px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  gap: '22px',
+                  padding: '56px 0',
+                  position: 'relative',
+                  zIndex: '10',
+                }}
+              >
                 <span
                   style={{
                     alignSelf: 'flex-start',
@@ -182,6 +194,7 @@ export function HomeView(props: {}) {
                     WebkitBackdropFilter: 'blur(10px)',
                     color: '#FFFFFF',
                     textDecoration: 'none',
+                    zIndex: '10',
                   }}
                   href="/team/player"
                 >
@@ -203,7 +216,7 @@ export function HomeView(props: {}) {
                     <span style={{ fontSize: '14px', color: '#CFE3F2' }}>{v.hero.role}</span>
                   </span>
                 </Link>
-                <div style={{ position: 'absolute', right: '0', bottom: '12px', display: 'flex', gap: '6px' }} aria-hidden="true">
+                <div style={{ position: 'absolute', right: '0', bottom: '12px', display: 'flex', gap: '6px', zIndex: '10' }} aria-hidden="true">
                   {v.heroDots.map((d: any, dIdx: number) => (
                     <Fragment key={dIdx}>
                       <span style={{ width: d.w, height: '6px', borderRadius: '3px', background: d.c, transition: 'width 0.4s ease, background 0.4s ease' }} />
@@ -213,58 +226,19 @@ export function HomeView(props: {}) {
               </div>
             </div>
           </section>
-          <div style={{ background: '#129ED9', overflow: 'hidden' }} aria-hidden="true">
-            <div style={{ height: '72px', display: 'flex', alignItems: 'center', gap: '36px', paddingLeft: '24px' }}>
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={26} h={26} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '1' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-              <Star w={18} h={18} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.8' }} keepRatio />
-              <Star w={12} h={12} fill="#FFFFFF" style={{ flexShrink: '0', opacity: '0.55' }} keepRatio />
-            </div>
-          </div>
+          <div
+            style={{
+              position: 'absolute',
+              left: '0px',
+              right: '0px',
+              bottom: '0px',
+              height: '220px',
+              zIndex: '5',
+              pointerEvents: 'none',
+              background: 'linear-gradient(180deg, rgba(23, 42, 81, 0) 0%, rgba(23, 42, 81, 0.5) 40%, rgba(23, 42, 81, 0.85) 75%, #172A51 100%)',
+            }}
+            aria-hidden="true"
+          />
         </div>
         <section
           style={{
