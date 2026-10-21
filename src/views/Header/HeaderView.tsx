@@ -101,6 +101,22 @@ export function HeaderView(props: { active?: string }) {
             <span style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <Link
                 style={{
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  background: '#F2F6FA',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                href="/tickets"
+                aria-label="Купить билеты"
+                title="Купить билеты"
+              >
+                <Icon name="ticket-01" size={20} weight={1.6} color="#172A51" />
+              </Link>
+              <Link
+                style={{
                   position: 'relative',
                   width: '40px',
                   height: '40px',
@@ -134,39 +150,33 @@ export function HeaderView(props: { active?: string }) {
                   2
                 </span>
               </Link>
+              <span style={{ width: '1px', height: '28px', margin: '0 4px', background: '#DCE3EE' }} aria-hidden="true" />
               <Link
                 style={{
-                  width: '40px',
-                  height: '40px',
-                  borderRadius: '50%',
+                  height: '44px',
+                  padding: '0 14px 0 4px',
+                  borderRadius: '22px',
                   background: '#F2F6FA',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                href="/profile"
-                aria-label="Личный кабинет"
-              >
-                <Icon name="user-circle" size={20} weight={1.6} color="#172A51" />
-              </Link>
-              <Link
-                style={{
-                  height: '40px',
-                  padding: '0 18px',
-                  borderRadius: '14px',
-                  background: '#0B7DB0',
-                  color: '#FFFFFF',
-                  fontSize: '15px',
-                  fontWeight: '700',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
+                  gap: '10px',
+                  color: '#172A51',
                   textDecoration: 'none',
                 }}
-                href="/tickets"
+                href="/profile"
+                aria-label="Личный кабинет: Бекжан, 2 480 баллов"
               >
-                <Icon name="ticket-01" size={18} weight={1.8} color="#FFFFFF" />
-                Купить билеты
+                <img
+                  style={{ width: '36px', height: '36px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #FFFFFF', boxSizing: 'border-box' }}
+                  src={asset('/img/avatar.webp')}
+                  alt=""
+                />
+                <span style={{ display: 'flex', flexDirection: 'column', gap: '1px', lineHeight: '1.1' }}>
+                  <span style={{ fontSize: '15px', fontWeight: '700' }}>Бекжан</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '13px', fontWeight: '700', color: '#0B7DB0' }}>
+                    <img style={{ width: '14px', height: '14px', objectFit: 'contain' }} src={asset('/img/coin.webp')} alt="" />2 480
+                  </span>
+                </span>
               </Link>
             </span>
           </div>
