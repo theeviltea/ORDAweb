@@ -137,7 +137,7 @@ export function FooterView(props: {}) {
                   <Link style={{ fontSize: '16px', color: '#CFE3F2', textDecoration: 'none' }} href="/media#video">
                     Видео
                   </Link>
-                  <Link style={{ fontSize: '16px', color: '#CFE3F2', textDecoration: 'none' }} href="/matches">
+                  <Link style={{ fontSize: '16px', color: '#CFE3F2', textDecoration: 'none' }} href="/tickets">
                     Билеты
                   </Link>
                 </nav>

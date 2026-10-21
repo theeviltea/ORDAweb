@@ -981,7 +981,7 @@ export function MediaView(props: {}) {
                   color: '#0B7DB0',
                   textDecoration: 'none',
                 }}
-                href="/media"
+                href="/media/photos"
               >
                 Все фотоотчёты
                 <Icon name="arrow-right-01" size={18} weight={2} color="#0B7DB0" />
@@ -1000,7 +1000,7 @@ export function MediaView(props: {}) {
                     color: '#FFFFFF',
                     textDecoration: 'none',
                   }}
-                  href="/media"
+                  href="/media/photos/album"
                 >
                   <img
                     style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }}
@@ -1057,7 +1057,7 @@ export function MediaView(props: {}) {
                   color: '#FFFFFF',
                   textDecoration: 'none',
                 }}
-                href="/media"
+                href="/media/photos/album"
               >
                 <img
                   style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }}
@@ -1103,7 +1103,7 @@ export function MediaView(props: {}) {
                   color: '#FFFFFF',
                   textDecoration: 'none',
                 }}
-                href="/media"
+                href="/media/photos/album"
               >
                 <img
                   style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }}
@@ -1149,7 +1149,7 @@ export function MediaView(props: {}) {
                   color: '#FFFFFF',
                   textDecoration: 'none',
                 }}
-                href="/media"
+                href="/media/photos/album"
               >
                 <img
                   style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }}
@@ -1195,7 +1195,7 @@ export function MediaView(props: {}) {
                   color: '#FFFFFF',
                   textDecoration: 'none',
                 }}
-                href="/media"
+                href="/media/photos/album"
               >
                 <img
                   style={{ position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' }}

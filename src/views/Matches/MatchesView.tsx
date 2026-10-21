@@ -336,7 +336,7 @@ export function MatchesView(props: {}) {
                         gap: '8px',
                         textDecoration: 'none',
                       }}
-                      href="/matches"
+                      href="/tickets"
                     >
                       <Icon name="ticket-01" size={20} weight={1.8} color="#172A51" />
                       Купить билеты
@@ -576,7 +576,7 @@ export function MatchesView(props: {}) {
                                       gap: '6px',
                                       textDecoration: 'none',
                                     }}
-                                    href="/matches"
+                                    href="/tickets"
                                   >
                                     <Icon name="ticket-01" size={18} weight={1.8} color="#FFFFFF" />
                                     Билеты

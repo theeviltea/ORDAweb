@@ -163,7 +163,7 @@ export function HeaderView(props: { active?: string }) {
                   gap: '8px',
                   textDecoration: 'none',
                 }}
-                href="/matches"
+                href="/tickets"
               >
                 <Icon name="ticket-01" size={18} weight={1.8} color="#FFFFFF" />
                 Купить билеты

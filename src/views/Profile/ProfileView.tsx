@@ -567,7 +567,7 @@ export function ProfileView(props: {}) {
                             flexDirection: 'column',
                             gap: '12px',
                           }}
-                          href="/matches"
+                          href="/tickets"
                         >
                           <span
                             style={{

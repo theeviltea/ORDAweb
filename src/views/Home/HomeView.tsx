@@ -88,7 +88,7 @@ export function HomeView(props: {}) {
                       alignItems: 'center',
                       textDecoration: 'none',
                     }}
-                    href="/matches"
+                    href="/tickets"
                   >
                     На следующий матч
                   </Link>
@@ -530,7 +530,7 @@ export function HomeView(props: {}) {
                     gap: '8px',
                     textDecoration: 'none',
                   }}
-                  href="/matches"
+                  href="/tickets"
                 >
                   <Icon name="ticket-01" size={20} weight={1.8} color="#172A51" />
                   Купить билеты
@@ -2934,7 +2934,7 @@ export function HomeView(props: {}) {
                     alignItems: 'center',
                     gap: '8px',
                   }}
-                  href="/matches"
+                  href="/tickets"
                 >
                   Купить билеты
                   <Icon name="arrow-right-01" size={18} weight={2} color="#172A51" />

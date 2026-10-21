@@ -17,6 +17,9 @@ import { ProfileView } from '@/views/Profile/ProfileView';
 import { PlayerView } from '@/views/Player/PlayerView';
 import { NewsView } from '@/views/News/NewsView';
 import { ArticleView } from '@/views/Article/ArticleView';
+import { TicketsView } from '@/views/Tickets/TicketsView';
+import { PhotosView } from '@/views/Photos/PhotosView';
+import { PhotoAlbumView } from '@/views/PhotoAlbum/PhotoAlbumView';
 
 const pages: Record<string, [string, () => JSX.Element]> = {
   '/': [
@@ -39,6 +42,9 @@ const pages: Record<string, [string, () => JSX.Element]> = {
   '/team/player': ['Профиль игрока', () => <PlayerView />],
   '/news': ['Новости', () => <NewsView />],
   '/news/article': ['Новость', () => <ArticleView />],
+  '/tickets': ['Покупка билетов', () => <TicketsView />],
+  '/media/photos': ['Фото', () => <PhotosView />],
+  '/media/photos/album': ['Фотоальбом', () => <PhotoAlbumView />],
 };
 // Прямые ссылки на разделы: <ссылка артефакта>#team, #matches, #product …
 const tokens: Record<string, string> = {
