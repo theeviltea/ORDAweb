@@ -49,7 +49,7 @@ export function HeaderView(props: { active?: string }) {
             </span>
           </div>
         </div>
-        <header style={{ position: 'relative', margin: '0', borderRadius: '0', background: 'rgba(255, 255, 255, 0.78)', backdropFilter: 'blur(18px) saturate(1.6)', WebkitBackdropFilter: 'blur(18px) saturate(1.6)', borderBottom: '1px solid rgba(255, 255, 255, 0.5)', boxShadow: '0 8px 24px rgba(10, 18, 36, 0.18)' }}>
+        <header style={{ position: 'relative', margin: '0', borderRadius: '0', background: '#FFFFFF', boxShadow: '0 8px 24px rgba(10, 18, 36, 0.18)' }}>
           <div
             style={{
               width: '100%',

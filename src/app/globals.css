@@ -111,3 +111,12 @@ img {
     transition: none !important;
   }
 }
+
+/* Наверху страницы шапка белая; после прокрутки — полупрозрачная с размытием (класс ставит SiteHeader). */
+.site-header header { transition: background-color 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease; }
+.site-header.is-scrolled header {
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(18px) saturate(1.6);
+  -webkit-backdrop-filter: blur(18px) saturate(1.6);
+  box-shadow: 0 8px 24px rgba(10, 18, 36, 0.16), inset 0 -1px 0 rgba(255, 255, 255, 0.5) !important;
+}
