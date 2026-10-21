@@ -95,9 +95,6 @@ export function FooterView(props: {}) {
               <div style={{ display: 'flex', gap: '48px', flexWrap: 'wrap' }}>
                 <nav style={{ display: 'flex', flexDirection: 'column', gap: '14px', minWidth: '160px' }} aria-label="Клуб">
                   <span style={{ fontSize: '13px', fontWeight: '700', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#FFFFFF' }}>Клуб</span>
-                  <Link style={{ fontSize: '16px', color: '#CFE3F2', textDecoration: 'none' }} href="/#interview">
-                    О клубе
-                  </Link>
                   <Link style={{ fontSize: '16px', color: '#CFE3F2', textDecoration: 'none' }} href="/">
                     История
                   </Link>

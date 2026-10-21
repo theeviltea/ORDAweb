@@ -80,9 +80,10 @@ export function HeaderView(props: { active?: string }) {
                   <Link
                     style={{
                       height: '36px',
-                      padding: '0 14px',
+                      padding: '0 14px 0 10px',
                       display: 'flex',
                       alignItems: 'center',
+                      gap: '6px',
                       borderRadius: '18px',
                       fontSize: '15px',
                       fontWeight: n.weight,
@@ -93,6 +94,7 @@ export function HeaderView(props: { active?: string }) {
                     href={route(n.href)}
                     aria-current={n.current}
                   >
+                    <Icon name={n.icon} size={18} weight={1.8} color={n.color} />
                     {n.label}
                   </Link>
                 </Fragment>
