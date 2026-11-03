@@ -3372,6 +3372,25 @@ export function HomeView(props: {}) {
                   alt="Евразия — страхование жизни"
                 />
               </Link>
+              <Link
+                style={{
+                  flex: '1 1 0',
+                  height: '128px',
+                  boxSizing: 'border-box',
+                  padding: '20px',
+                  borderRadius: '20px',
+                  background: '#F2F6FA',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  textDecoration: 'none',
+                  minWidth: '0',
+                }}
+                href="/"
+                aria-label="ALLOFF"
+              >
+                <img style={{ maxWidth: '70%', maxHeight: '34px', objectFit: 'contain' }} src={asset('/img/sponsor-alloff.png')} alt="ALLOFF" />
+              </Link>
             </div>
           </div>
         </section>
