@@ -605,7 +605,7 @@ export function TicketsView(props: {}) {
                       gap: '10px',
                       textDecoration: 'none',
                     }}
-                    href="/profile"
+                    href="/checkout/tickets"
                   >
                     <Icon name="ticket-01" size={22} weight={1.8} color="#FFFFFF" />
                     Перейти к оплате

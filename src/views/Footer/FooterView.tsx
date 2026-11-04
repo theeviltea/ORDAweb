@@ -104,8 +104,8 @@ export function FooterView(props: {}) {
                   <Link style={{ fontSize: '16px', color: '#CFE3F2', textDecoration: 'none' }} href="/media">
                     Новости клуба
                   </Link>
-                  <Link style={{ fontSize: '16px', color: '#CFE3F2', textDecoration: 'none' }} href="/">
-                    Контакты
+                  <Link style={{ fontSize: '16px', color: '#CFE3F2', textDecoration: 'none' }} href="/legal">
+                    Контакты и реквизиты
                   </Link>
                 </nav>
                 <nav style={{ display: 'flex', flexDirection: 'column', gap: '14px', minWidth: '160px' }} aria-label="Команды">
@@ -161,16 +161,78 @@ export function FooterView(props: {}) {
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
-                gap: '16px',
+                alignItems: 'center',
+                gap: '20px',
                 flexWrap: 'wrap',
                 paddingTop: '24px',
+                borderTop: '1px solid rgba(255, 255, 255, 0.12)',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+                <span style={{ fontSize: '13px', fontWeight: '700', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#FFFFFF' }}>
+                  Принимаем к оплате
+                </span>
+                <img style={{ width: '56px', height: '36px', borderRadius: '6px' }} src={asset('/img/pay-visa.png')} alt="Visa" />
+                <img style={{ width: '56px', height: '36px', borderRadius: '6px' }} src={asset('/img/pay-mastercard.png')} alt="Mastercard" />
+                <a
+                  style={{
+                    height: '36px',
+                    boxSizing: 'border-box',
+                    padding: '0 12px',
+                    borderRadius: '6px',
+                    background: 'rgba(255, 255, 255, 0.08)',
+                    border: '1px solid rgba(255, 255, 255, 0.18)',
+                    color: '#FFFFFF',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    fontSize: '14px',
+                    fontWeight: '700',
+                    textDecoration: 'none',
+                  }}
+                  href="https://epayment.kz"
+                  aria-label="Halyk ePay — epayment.kz"
+                >
+                  Halyk ePay
+                  <Icon name="link-square-02" size={15} weight={1.8} color="#CFE3F2" />
+                </a>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#CFE3F2' }}>
+                  <Icon name="security-check" size={16} weight={1.8} color="#7FD3A2" />
+                  3-D Secure
+                </span>
+              </div>
+              <nav style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', fontSize: '14px' }} aria-label="Документы">
+                <Link style={{ color: '#CFE3F2', textDecoration: 'none' }} href="/legal/documents#offer">
+                  Публичная оферта
+                </Link>
+                <Link style={{ color: '#CFE3F2', textDecoration: 'none' }} href="/legal/documents#payment">
+                  Оплата и безопасность
+                </Link>
+                <Link style={{ color: '#CFE3F2', textDecoration: 'none' }} href="/legal/documents#delivery">
+                  Доставка
+                </Link>
+                <Link style={{ color: '#CFE3F2', textDecoration: 'none' }} href="/legal/documents#returns">
+                  Обмен и возврат
+                </Link>
+                <Link style={{ color: '#CFE3F2', textDecoration: 'none' }} href="/legal">
+                  Реквизиты
+                </Link>
+              </nav>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                gap: '16px',
+                flexWrap: 'wrap',
+                paddingTop: '20px',
                 borderTop: '1px solid rgba(255, 255, 255, 0.12)',
                 fontSize: '14px',
                 color: '#CFE3F2',
               }}
             >
-              <span>© ФК «Ордабасы». Все права защищены.</span>
-              <Link style={{ color: '#CFE3F2', textDecoration: 'none' }} href="/">
+              <span>© [Полное наименование юрлица, например ТОО «Футбольный клуб «Ордабасы»] · БИН [БИН] · [Юридический адрес]</span>
+              <Link style={{ color: '#CFE3F2', textDecoration: 'none' }} href="/legal/documents#privacy">
                 Политика конфиденциальности
               </Link>
               <span style={{ letterSpacing: '0.08em', textTransform: 'uppercase' }}>Шымкент · Қазақстан</span>

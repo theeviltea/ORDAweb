@@ -718,9 +718,10 @@ export function ProductView(props: {}) {
                       gap: '8px',
                       textDecoration: 'none',
                     }}
-                    href="/shop/orders"
+                    href="/checkout"
                   >
-                    <Icon name="shopping-bag-02" size={20} weight={1.8} color="#FFFFFF" />В корзину
+                    <Icon name="shopping-bag-02" size={20} weight={1.8} color="#FFFFFF" />
+                    Купить
                   </Link>
                 </div>
                 <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>

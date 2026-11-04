@@ -13,6 +13,9 @@ const sections: [string, string][] = [
   ['/fans', 'fans'],
   ['/tickets', 'none'],
   ['/profile', 'none'],
+  ['/checkout/tickets', 'none'],
+  ['/checkout', 'shop'],
+  ['/legal', 'none'],
 ];
 
 export function SiteHeader() {

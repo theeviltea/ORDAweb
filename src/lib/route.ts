@@ -61,6 +61,11 @@ const map: Record<string, string> = {
   WebPlayer: '/team/player',
   WebNews: '/news',
   WebArticle: '/news/article',
+  WebLegal: '/legal',
+  WebDocs: '/legal/documents',
+  WebCheckout: '/checkout',
+  WebCheckoutTickets: '/checkout/tickets',
+  WebCheckoutPaid: '/checkout/paid',
 };
 
 export function route(href: string): string {

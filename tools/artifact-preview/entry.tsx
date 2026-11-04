@@ -21,6 +21,11 @@ import { TicketsView } from '@/views/Tickets/TicketsView';
 import { LineupView } from '@/views/Lineup/LineupView';
 import { PhotosView } from '@/views/Photos/PhotosView';
 import { PhotoAlbumView } from '@/views/PhotoAlbum/PhotoAlbumView';
+import { LegalView } from '@/views/Legal/LegalView';
+import { DocsView } from '@/views/Docs/DocsView';
+import { CheckoutView } from '@/views/Checkout/CheckoutView';
+import { CheckoutTicketsView } from '@/views/CheckoutTickets/CheckoutTicketsView';
+import { CheckoutPaidView } from '@/views/CheckoutPaid/CheckoutPaidView';
 
 const pages: Record<string, [string, () => JSX.Element]> = {
   '/': [
@@ -47,6 +52,11 @@ const pages: Record<string, [string, () => JSX.Element]> = {
   '/matches/lineup': ['Состав и расстановка', () => <LineupView />],
   '/media/photos': ['Фото', () => <PhotosView />],
   '/media/photos/album': ['Фотоальбом', () => <PhotoAlbumView />],
+  '/legal': ['Документы и реквизиты', () => <LegalView />],
+  '/legal/documents': ['Оферта и правила', () => <DocsView />],
+  '/checkout': ['Оформление заказа', () => <CheckoutView />],
+  '/checkout/tickets': ['Оплата билетов', () => <CheckoutTicketsView />],
+  '/checkout/paid': ['Оплата прошла', () => <CheckoutPaidView />],
 };
 // Прямые ссылки на разделы: <ссылка артефакта>#team, #matches, #product …
 const tokens: Record<string, string> = {
@@ -58,6 +68,9 @@ const tokens: Record<string, string> = {
   orders: '/shop/orders',
   fans: '/fans',
   profile: '/profile',
+  legal: '/legal',
+  documents: '/legal/documents',
+  checkout: '/checkout',
 };
 
 function App() {
