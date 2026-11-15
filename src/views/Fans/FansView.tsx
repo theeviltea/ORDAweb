@@ -523,7 +523,7 @@ export function FansView(props: {}) {
                   flexDirection: 'column',
                   gap: '8px',
                 }}
-                href="/fans"
+                href="/fans/interactive"
               >
                 <Star w={110} h={180} fill="rgba(255, 255, 255, 0.22)" style={{ position: 'absolute', right: '-30px', bottom: '-60px' }} />
                 <Star w={14} h={14} fill="rgba(255, 255, 255, 0.22)" style={{ position: 'absolute', right: '46%', top: '30px' }} />

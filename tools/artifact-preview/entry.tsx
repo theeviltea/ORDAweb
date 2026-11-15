@@ -26,6 +26,10 @@ import { DocsView } from '@/views/Docs/DocsView';
 import { CheckoutView } from '@/views/Checkout/CheckoutView';
 import { CheckoutTicketsView } from '@/views/CheckoutTickets/CheckoutTicketsView';
 import { CheckoutPaidView } from '@/views/CheckoutPaid/CheckoutPaidView';
+import { InteractiveView } from '@/views/Interactive/InteractiveView';
+import { PhotoWallView } from '@/views/PhotoWall/PhotoWallView';
+import { HalftimeScoreView } from '@/views/HalftimeScore/HalftimeScoreView';
+import { HalftimeDrawView } from '@/views/HalftimeDraw/HalftimeDrawView';
 
 const pages: Record<string, [string, () => JSX.Element]> = {
   '/': [
@@ -57,6 +61,10 @@ const pages: Record<string, [string, () => JSX.Element]> = {
   '/checkout': ['Оформление заказа', () => <CheckoutView />],
   '/checkout/tickets': ['Оплата билетов', () => <CheckoutTicketsView />],
   '/checkout/paid': ['Оплата прошла', () => <CheckoutPaidView />],
+  '/fans/interactive': ['Интерактив на стадионе', () => <InteractiveView />],
+  '/fans/interactive/photo': ['Фото на табло', () => <PhotoWallView />],
+  '/fans/interactive/score': ['Счёт перерыва', () => <HalftimeScoreView />],
+  '/fans/interactive/draw': ['Розыгрыш в перерыве', () => <HalftimeDrawView />],
 };
 // Прямые ссылки на разделы: <ссылка артефакта>#team, #matches, #product …
 const tokens: Record<string, string> = {
@@ -71,6 +79,7 @@ const tokens: Record<string, string> = {
   legal: '/legal',
   documents: '/legal/documents',
   checkout: '/checkout',
+  interactive: '/fans/interactive',
 };
 
 function App() {

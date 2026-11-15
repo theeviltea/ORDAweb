@@ -27,10 +27,12 @@ ROUTE = {
  'Interviews': '/media', 'Videos': '/media', 'VideoPlayer': '/media', 'Photos': '/media/photos', 'PhotoAlbum': '/media/photos/album', 'WebPhotos': '/media/photos', 'WebPhotoAlbum': '/media/photos/album', 'PressConf': '/media', 'MomentViewer': '/media',
  'Login': '/profile', 'Support': '/profile', 'TicketQR': '/profile', 'NewPassword': '/profile', 'Achievements': '/profile',
  'Quizzes': '/fans', 'Contests': '/fans', 'Contest': '/fans', 'ContestApplyFilled': '/fans', 'ContestWinners': '/fans', 'Polls': '/fans', 'Predictions': '/fans', 'Tasks': '/fans',
- 'Interactive': '/fans', 'Offer': '/fans', 'ForYou': '/fans', 'FanZone': '/fans', 'Product': '/shop/product', 'ProductNoPhoto': '/shop/product', 'ShopOrders': '/shop/orders',
+ 'Interactive': '/fans/interactive', 'Offer': '/fans', 'ForYou': '/fans', 'FanZone': '/fans', 'Product': '/shop/product', 'ProductNoPhoto': '/shop/product', 'ShopOrders': '/shop/orders',
  'Shop': '/shop', 'Team': '/team', 'Player': '/team/player',
  'WebPlayer': '/team/player', 'WebNews': '/news', 'WebArticle': '/news/article',
  'WebLegal': '/legal', 'WebDocs': '/legal/documents', 'WebCheckout': '/checkout', 'WebCheckoutTickets': '/checkout/tickets', 'WebCheckoutPaid': '/checkout/paid',
+ 'WebInteractive': '/fans/interactive', 'WebPhotoWall': '/fans/interactive/photo', 'WebHalftimeScore': '/fans/interactive/score', 'WebHalftimeDraw': '/fans/interactive/draw',
+ 'PhotoWall': '/fans/interactive/photo', 'HalftimeScore': '/fans/interactive/score', 'HalftimeDraw': '/fans/interactive/draw',
 }
 SVG_ATTR = {'viewbox': 'viewBox', 'preserveaspectratio': 'preserveAspectRatio', 'fill-opacity': 'fillOpacity', 'stroke-width': 'strokeWidth', 'stroke-linecap': 'strokeLinecap',
             'stroke-linejoin': 'strokeLinejoin', 'fill-rule': 'fillRule', 'clip-rule': 'clipRule', 'xmlns': None, 'stop-color': 'stopColor', 'gradientunits': 'gradientUnits',
@@ -174,6 +176,8 @@ class Emit:
                 out.append(f'{kk}={{{fx(HOLE.fullmatch(v.strip()).group(1))}}}'); continue
             if k in ('src',) or HOLE.search(v):
                 out.append(f'{kk}={{{jsval(v)}}}'); continue
+            if kk in ('maxLength', 'tabIndex', 'colSpan', 'rowSpan') and v.strip().lstrip('-').isdigit():
+                out.append(f'{kk}={{{v.strip()}}}'); continue
             out.append(f'{kk}={json.dumps(v, ensure_ascii=False)}')
         if style is not None:
             out.insert(0, 'style=' + style_obj(style))

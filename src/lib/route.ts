@@ -48,7 +48,7 @@ const map: Record<string, string> = {
   Polls: '/fans',
   Predictions: '/fans',
   Tasks: '/fans',
-  Interactive: '/fans',
+  Interactive: '/fans/interactive',
   Offer: '/fans',
   ForYou: '/fans',
   FanZone: '/fans',
@@ -66,6 +66,13 @@ const map: Record<string, string> = {
   WebCheckout: '/checkout',
   WebCheckoutTickets: '/checkout/tickets',
   WebCheckoutPaid: '/checkout/paid',
+  WebInteractive: '/fans/interactive',
+  WebPhotoWall: '/fans/interactive/photo',
+  WebHalftimeScore: '/fans/interactive/score',
+  WebHalftimeDraw: '/fans/interactive/draw',
+  PhotoWall: '/fans/interactive/photo',
+  HalftimeScore: '/fans/interactive/score',
+  HalftimeDraw: '/fans/interactive/draw',
 };
 
 export function route(href: string): string {
