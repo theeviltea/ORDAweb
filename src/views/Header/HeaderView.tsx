@@ -8,6 +8,7 @@ import { asset } from '@/lib/asset';
 import { Icon } from '@/components/Icon';
 import { useDC } from '@/lib/dc';
 import { vals, tick } from './Header.vals';
+import './Header.css';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function HeaderView(props: { active?: string }) {
@@ -152,6 +153,277 @@ export function HeaderView(props: { active?: string }) {
                   2
                 </span>
               </Link>
+              <span style={{ position: 'relative' }}>
+                <button
+                  style={{
+                    position: 'relative',
+                    width: '40px',
+                    height: '40px',
+                    padding: '0',
+                    border: '0',
+                    borderRadius: '50%',
+                    background: v.bellBg,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                  }}
+                  type="button"
+                  aria-label={v.bellLabel}
+                  aria-expanded={v.openStr}
+                  aria-haspopup="dialog"
+                  onClick={v.toggle}
+                >
+                  <Icon name="notification-01" size={20} weight={1.6} color={v.bellFg} />
+                  {v.hasUnread && (
+                    <>
+                      <span
+                        style={{
+                          position: 'absolute',
+                          right: '-2px',
+                          top: '-2px',
+                          minWidth: '18px',
+                          height: '18px',
+                          padding: '0 4px',
+                          boxSizing: 'border-box',
+                          borderRadius: '9px',
+                          background: '#E30512',
+                          color: '#FFFFFF',
+                          fontSize: '11px',
+                          fontWeight: '700',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                        }}
+                      >
+                        {v.unread}
+                      </span>
+                    </>
+                  )}
+                </button>
+                {v.open && (
+                  <>
+                    <button
+                      style={{ position: 'fixed', inset: '0', zIndex: '40', padding: '0', border: '0', background: 'transparent', cursor: 'default' }}
+                      type="button"
+                      aria-label="Закрыть уведомления"
+                      className="orda-bell-backdrop"
+                      onClick={v.close}
+                    />
+                    <div
+                      style={{
+                        position: 'absolute',
+                        right: '-8px',
+                        top: '52px',
+                        zIndex: '50',
+                        width: 'min(420px, calc(100vw - 32px))',
+                        borderRadius: '24px',
+                        background: '#FFFFFF',
+                        boxShadow: '0 24px 60px rgba(10, 18, 36, 0.28), 0 0 0 1px rgba(23, 42, 81, 0.06)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                      }}
+                      role="dialog"
+                      aria-label="Уведомления"
+                      className="orda-bell-panel"
+                    >
+                      <span
+                        style={{
+                          position: 'absolute',
+                          right: '21px',
+                          top: '-7px',
+                          width: '14px',
+                          height: '14px',
+                          background: '#FFFFFF',
+                          transform: 'rotate(45deg)',
+                        }}
+                        aria-hidden="true"
+                        className="orda-bell-caret"
+                      />
+                      <div
+                        style={{
+                          position: 'relative',
+                          padding: '18px 20px 12px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: '12px',
+                          borderBottom: '1px solid #EEF3F8',
+                        }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
+                          <span
+                            style={{
+                              fontFamily: "'SO Sporty', 'Oswald', sans-serif",
+                              fontSize: '26px',
+                              fontWeight: '600',
+                              lineHeight: '1',
+                              textTransform: 'uppercase',
+                            }}
+                          >
+                            Уведомления
+                          </span>
+                          <button
+                            style={{
+                              padding: '0',
+                              border: '0',
+                              background: 'transparent',
+                              color: v.readAllColor,
+                              fontFamily: 'inherit',
+                              fontSize: '14px',
+                              fontWeight: '700',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '4px',
+                              cursor: 'pointer',
+                            }}
+                            type="button"
+                            onClick={v.readAll}
+                          >
+                            <Icon name="tick-02" size={16} weight={2.2} color={v.readAllColor} />
+                            Прочитать все
+                          </button>
+                        </div>
+                        <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }} role="tablist" aria-label="Тип">
+                          {v.chips.map((c: any, cIdx: number) => (
+                            <Fragment key={cIdx}>
+                              <button
+                                style={{
+                                  height: '32px',
+                                  padding: '0 12px',
+                                  borderRadius: '16px',
+                                  border: '0',
+                                  background: c.bg,
+                                  color: c.fg,
+                                  fontFamily: 'inherit',
+                                  fontSize: '13px',
+                                  fontWeight: c.w,
+                                  cursor: 'pointer',
+                                }}
+                                type="button"
+                                role="tab"
+                                aria-selected={c.sel}
+                                onClick={c.pick}
+                              >
+                                {c.label}
+                              </button>
+                            </Fragment>
+                          ))}
+                        </div>
+                      </div>
+                      <div
+                        style={{ maxHeight: '440px', overflowY: 'auto', padding: '8px', display: 'flex', flexDirection: 'column', gap: '4px' }}
+                        className="orda-bell-list"
+                      >
+                        {v.notes.map((n: any, nIdx: number) => (
+                          <Fragment key={nIdx}>
+                            <Link
+                              style={{
+                                position: 'relative',
+                                display: 'flex',
+                                gap: '12px',
+                                alignItems: 'flex-start',
+                                padding: '12px 14px 12px 16px',
+                                borderRadius: '16px',
+                                background: n.rowBg,
+                                color: '#172A51',
+                                textDecoration: 'none',
+                              }}
+                              href={route(n.href)}
+                              onClick={n.read}
+                            >
+                              {n.unread && (
+                                <>
+                                  <span
+                                    style={{
+                                      position: 'absolute',
+                                      left: '0',
+                                      top: '14px',
+                                      bottom: '14px',
+                                      width: '4px',
+                                      borderRadius: '0 4px 4px 0',
+                                      background: '#129ED9',
+                                    }}
+                                    aria-hidden="true"
+                                  />
+                                </>
+                              )}
+                              <span
+                                style={{
+                                  flexShrink: '0',
+                                  width: '40px',
+                                  height: '40px',
+                                  boxSizing: 'border-box',
+                                  borderRadius: '12px',
+                                  background: n.tile,
+                                  border: n.tileBorder,
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                }}
+                              >
+                                {n.hasImg && (
+                                  <>
+                                    <img style={{ width: `${n.imgW}px`, height: '26px', objectFit: 'contain' }} src={n.img} alt="" />
+                                  </>
+                                )}
+                                {n.noImg && (
+                                  <>
+                                    <Icon name={n.icon} size={20} weight={1.7} color={n.iconColor} />
+                                  </>
+                                )}
+                              </span>
+                              <span style={{ display: 'flex', flexDirection: 'column', gap: '2px', flexGrow: '1', minWidth: '0' }}>
+                                <span style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                  <span style={{ flexGrow: '1', fontSize: '15px', fontWeight: n.weight, lineHeight: '1.25' }}>{n.title}</span>
+                                  {n.unread && (
+                                    <>
+                                      <span
+                                        style={{ flexShrink: '0', width: '8px', height: '8px', marginTop: '5px', borderRadius: '50%', background: '#129ED9' }}
+                                        aria-label="Не прочитано"
+                                      />
+                                    </>
+                                  )}
+                                </span>
+                                <span style={{ fontSize: '13px', lineHeight: '1.35', color: '#5B6B8C' }}>{n.text}</span>
+                                <span style={{ fontSize: '12px', color: '#8E9BB5' }}>{n.meta}</span>
+                              </span>
+                            </Link>
+                          </Fragment>
+                        ))}
+                        {v.empty && (
+                          <>
+                            <div
+                              style={{ padding: '36px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', textAlign: 'center' }}
+                            >
+                              <Icon name="notification-01" size={32} weight={1.8} color="#8E9BB5" />
+                              <span style={{ fontSize: '16px', fontWeight: '700' }}>Здесь пока пусто</span>
+                              <span style={{ fontSize: '14px', color: '#5B6B8C' }}>В этой категории нет уведомлений</span>
+                            </div>
+                          </>
+                        )}
+                      </div>
+                      <Link
+                        style={{
+                          padding: '14px 20px',
+                          borderTop: '1px solid #EEF3F8',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '6px',
+                          fontSize: '14px',
+                          fontWeight: '700',
+                          color: '#0B7DB0',
+                          textDecoration: 'none',
+                        }}
+                        href="/profile"
+                      >
+                        <Icon name="settings-01" size={16} weight={1.8} color="#0B7DB0" />
+                        Настройки уведомлений
+                      </Link>
+                    </div>
+                  </>
+                )}
+              </span>
               <span style={{ width: '1px', height: '28px', margin: '0 4px', background: '#DCE3EE' }} aria-hidden="true" />
               <Link
                 style={{

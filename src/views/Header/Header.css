@@ -1,0 +1,19 @@
+@media (max-width: 640px) {
+  .orda-bell-panel {
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    top: auto !important;
+    bottom: 12px !important;
+    width: auto !important;
+  }
+  .orda-bell-backdrop {
+    background: rgba(23, 42, 81, 0.55) !important;
+  }
+  .orda-bell-caret {
+    display: none;
+  }
+  .orda-bell-list {
+    max-height: calc(100vh - 230px) !important;
+  }
+}
