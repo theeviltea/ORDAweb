@@ -139,4 +139,17 @@ def gen_comp(board, name, props_type):
 gen_comp('PlayerCard', 'PlayerCardInner', '{ person?: unknown }')
 gen_comp('WebHeader', 'Header', '{ active?: string }')
 gen_comp('WebFooter', 'Footer', '{}')
+
+# Сообщения клуба (рассылки из админки без привязки к разделу): один шаблон, страница на каждое сообщение.
+gen_comp('WebBroadcast', 'Broadcast', '{ variant?: string }')
+for slug, variant, title, desc in [
+    ('champions', 'rich', 'Мы — чемпионы! «Ордабасы» на вершине Казахстана!', 'Сообщение клуба: чемпионский парад 22 ноября.'),
+    ('stadium-closed', 'plain', 'Стадион закрыт на обслуживание 20–22 ноября', 'Сообщение клуба для болельщиков.'),
+]:
+    pd = f'{OUT}/src/app/message/{slug}'
+    os.makedirs(pd, exist_ok=True)
+    open(f'{pd}/page.tsx', 'w').write(
+        "import type { Metadata } from 'next';\nimport { BroadcastView } from '@/views/Broadcast/BroadcastView';\n\n"
+        f"export const metadata: Metadata = {{ title: {json.dumps(title, ensure_ascii=False)}, description: {json.dumps(desc, ensure_ascii=False)} }};\n\n"
+        f"export default function Page() {{\n  return <BroadcastView variant=\"{variant}\" />;\n}}\n")
 print('ok')

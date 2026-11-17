@@ -26,6 +26,7 @@ import { DocsView } from '@/views/Docs/DocsView';
 import { CheckoutView } from '@/views/Checkout/CheckoutView';
 import { CheckoutTicketsView } from '@/views/CheckoutTickets/CheckoutTicketsView';
 import { CheckoutPaidView } from '@/views/CheckoutPaid/CheckoutPaidView';
+import { BroadcastView } from '@/views/Broadcast/BroadcastView';
 import { InteractiveView } from '@/views/Interactive/InteractiveView';
 import { PhotoWallView } from '@/views/PhotoWall/PhotoWallView';
 import { HalftimeScoreView } from '@/views/HalftimeScore/HalftimeScoreView';
@@ -61,6 +62,8 @@ const pages: Record<string, [string, () => JSX.Element]> = {
   '/checkout': ['Оформление заказа', () => <CheckoutView />],
   '/checkout/tickets': ['Оплата билетов', () => <CheckoutTicketsView />],
   '/checkout/paid': ['Оплата прошла', () => <CheckoutPaidView />],
+  '/message/champions': ['Сообщение клуба', () => <BroadcastView variant="rich" />],
+  '/message/stadium-closed': ['Сообщение клуба', () => <BroadcastView variant="plain" />],
   '/fans/interactive': ['Интерактив на стадионе', () => <InteractiveView />],
   '/fans/interactive/photo': ['Фото на табло', () => <PhotoWallView />],
   '/fans/interactive/score': ['Счёт перерыва', () => <HalftimeScoreView />],
@@ -80,6 +83,7 @@ const tokens: Record<string, string> = {
   documents: '/legal/documents',
   checkout: '/checkout',
   interactive: '/fans/interactive',
+  message: '/message/champions',
 };
 
 function App() {

@@ -32,6 +32,7 @@ ROUTE = {
  'WebPlayer': '/team/player', 'WebNews': '/news', 'WebArticle': '/news/article',
  'WebLegal': '/legal', 'WebDocs': '/legal/documents', 'WebCheckout': '/checkout', 'WebCheckoutTickets': '/checkout/tickets', 'WebCheckoutPaid': '/checkout/paid',
  'WebInteractive': '/fans/interactive', 'WebPhotoWall': '/fans/interactive/photo', 'WebHalftimeScore': '/fans/interactive/score', 'WebHalftimeDraw': '/fans/interactive/draw',
+ 'WebBroadcast': '/message/champions', 'WebBroadcastPlain': '/message/stadium-closed', 'Broadcast': '/message/champions', 'BroadcastPlain': '/message/stadium-closed',
  'PhotoWall': '/fans/interactive/photo', 'HalftimeScore': '/fans/interactive/score', 'HalftimeDraw': '/fans/interactive/draw',
 }
 SVG_ATTR = {'viewbox': 'viewBox', 'preserveaspectratio': 'preserveAspectRatio', 'fill-opacity': 'fillOpacity', 'stroke-width': 'strokeWidth', 'stroke-linecap': 'strokeLinecap',
